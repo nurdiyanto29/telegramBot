@@ -53,6 +53,12 @@ class BatasBayarCron extends Command
             'parse_mode' => 'HTML',
             'text' => $message,
         ]);
+
+        Telegram::sendMessage([
+            'chat_id' => 5881233108, // Ganti dengan ID chat tujuan
+            'parse_mode' => 'HTML',
+            'text' => $message,
+        ]);
     
         Log::info("Morning message sent successfully!");
     }
