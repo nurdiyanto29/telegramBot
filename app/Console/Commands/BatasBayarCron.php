@@ -44,21 +44,24 @@ class BatasBayarCron extends Command
      * @return int
      */
     public function handle()
-
     {
-        $dayOfWeek = now()->format('l'); // Mendapatkan hari dalam format teks (Senin, Selasa, dst.)
-        $message = "Selamat hari $dayOfWeek sayang. Semoga hari mu menyenangkan ya. Semangat!";
-        Telegram::sendMessage([
-            'chat_id' => 5237463607, // Ganti dengan ID chat tujuan
-            'parse_mode' => 'HTML',
-            'text' => $message,
-        ]);
+
+        // $dayOfWeek = now()->format('l'); // Mendapatkan hari dalam format teks (Senin, Selasa, dst.)
+        $message = "Selamat hari  sayang. Semoga hari mu menyenangkan ya. Semangat!";
 
         Telegram::sendMessage([
             'chat_id' => 5881233108, // Ganti dengan ID chat tujuan
             'parse_mode' => 'HTML',
             'text' => $message,
         ]);
+
+        // Telegram::sendMessage([
+        //     'chat_id' => 5237463607, // Ganti dengan ID chat tujuan
+        //     'parse_mode' => 'HTML',
+        //     'text' => $message,
+        // ]);
+
+     
     
         Log::info("Morning message sent successfully!");
     }

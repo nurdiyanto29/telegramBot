@@ -34,8 +34,7 @@ class Kernel extends ConsoleKernel
 
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('batasbayar:cron')->dailyAt('10:10');
-
+        $schedule->command('batasbayar:cron')->dailyAt('13:34');
     }
 
      
